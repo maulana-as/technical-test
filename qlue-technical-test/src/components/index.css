@@ -20,3 +20,10 @@
 .pagination { 
     padding-top: 5px;
 }
+
+/* chart  */
+#chart { 
+    height: 75%;
+    width: 80%;
+    margin: 0 auto;
+}

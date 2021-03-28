@@ -1,9 +1,9 @@
-import React from 'react'; 
-import { Line } from 'react-chartjs-2'; 
+import React from "react";
+import { Line } from "react-chartjs-2";
 
-const Chart = ({ data }) => { 
+const Chart = ({ data }) => {
+  
+  return <Line data={data} options={{ responsive: true, height: '600px', width: "600px" }} />;
+};
 
-    return <Line data={data} options={{  responsive: true, height: '600px', width: "600px"  }} />
-}
-
-export default Chart; 
+export default Chart;

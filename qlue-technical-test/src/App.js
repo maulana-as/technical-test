@@ -32,10 +32,10 @@ function App() {
 
       <div className="container mt-3">
         <Switch>
+          <Route exact path="/people-graph" component={PeopleGraph}/>
           <QueryClientProvider client={queryClient}>
             <Route exact path={["/", "/people-table"]} component={PeopleTable} />
           </QueryClientProvider>
-          <Route exact path="/people-graph" component={PeopleGraph}/>
         </Switch>
       </div>
     </div>
