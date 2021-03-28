@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap");
+
+#tableQlue { 
+    border-collapse: collapse;
+    border: 3px solid #ddd; 
+}
+
+#tableQlue td, 
+#tableQlue th { 
+    border: 2px solid #ddd;
+    padding: 20px;
+}
+
+#tableQlue th { 
+    padding: 10px; 
+    text-align: center;
+    color: #000;
+}
+
+.pagination { 
+    padding-top: 5px;
+}

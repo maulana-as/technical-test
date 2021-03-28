@@ -2,6 +2,12 @@ import React from 'react'
 import { Switch, Route, Link } from 'react-router-dom';
 import "bootstrap/dist/css/bootstrap.min.css"
 import {PeopleGraph, PeopleTable} from './components/index'
+import { QueryClient, QueryClientProvider } from 'react-query'
+const queryClient = new QueryClient(); 
+queryClient.setDefaultOptions({ 
+  queries: {}
+})
+
 
 function App() {
   return (
@@ -26,7 +32,9 @@ function App() {
 
       <div className="container mt-3">
         <Switch>
-          <Route exact path={["/", "/people-table"]} component={PeopleTable} />
+          <QueryClientProvider client={queryClient}>
+            <Route exact path={["/", "/people-table"]} component={PeopleTable} />
+          </QueryClientProvider>
           <Route exact path="/people-graph" component={PeopleGraph}/>
         </Switch>
       </div>
