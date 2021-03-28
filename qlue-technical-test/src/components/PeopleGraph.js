@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import 'zingchart/es6'; 
 
 import { Line } from "react-chartjs-2";
 
@@ -8,6 +7,9 @@ const PeopleGraph = () => {
 
   useEffect(() => {
     getData();
+    return () => { 
+        setChart({});
+    }
   }, []);
   
   const getData = async () => { 
